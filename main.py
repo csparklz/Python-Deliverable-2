@@ -2,27 +2,41 @@
 
 print("Welcome to GC Fruit Market!")
 name = input("What is your name? ")
-print("Welcome " + name + "." " Which fruit would you like to buy?")
+print("Welcome, " + name + "." " Which fruit would you like to buy?")
 
 # Display a list of different fruit with prices
 #Apple $2
 #Grape $1
 #Orange $3
+
 fruit_choice=['1. Apple $2', '2. Grape $1', '3. Orange $3']
-for item in fruit_choice:
-    print(item)
+for fruit in fruit_choice:
+    print(fruit)
 
-selection = input("Enter the number of your choice: ")
-(selection) = int(selection)
+while True:
+    selection = input("Enter the number of your choice or 'N' to checkout: ")
 
-if selection == 1:
-    print("You bought 1 apple at $2")
-elif selection == 2:
-    print("You bought 1 grape at $1.")
-elif selection ==3:
-    print("You bought 1 orange at $3.")
+    if selection == 'N':
+        running_total =sum([2, 1, 3])
+        print(f"Current running_total: ${running_total}")
+        break
+    try:
+        selection = int(selection)
+        if selection == 1:
+            print("You bought 1 apple at $2")
+        elif selection == 2:
+            print("You bought 1 grape at $1.")
+        elif selection ==3:
+            print("You bought 1 orange at $3.")
+        else:
+            print("Invalid selection. Please choose a number from 1 to 3 or 'N' to checkout.")
+    except ValueError:
+        print("Invalid input. Please enter a number from 1 to 3 or 'N' to checkout.")
+
 
 #Ask Again
+
+
 
 
 
