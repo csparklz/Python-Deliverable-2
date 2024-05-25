@@ -14,3 +14,6 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+git remote add origin https://github.com/csparklz/Python-Deliverable-2.git
+git branch -M main
+git push -u origin main
