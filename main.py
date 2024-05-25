@@ -1,13 +1,6 @@
-#Welcome & ask user their name?
-
 print("Welcome to GC Fruit Market!")
 name = input("What is your name? ")
 print("Welcome, " + name + "." " Which fruit would you like to buy?")
-
-# Display a list of different fruit with prices
-#Apple $2
-#Grape $1
-#Orange $3
 
 fruit_prices = {
     1: {'name': 'Apple', 'price': 2},
@@ -75,10 +68,3 @@ while True:
 
     except ValueError:
         print("Invalid input. Please enter a number from 1 to 3 or 'N' to checkout.")
-
-#Once they are done, Print "Order for {name}, separate line,
-#1 apple(s) at $2 apiece
-#etc
-#subtotal: $5
-#5% tax: $.25
-#Total: $5.25
